@@ -1,10 +1,12 @@
 public class ThreadExample2 {
     // Creating a class that extends Thread class and override the run method.
-    
+
     public static class MyThread extends Thread{
+        @Override
          public void run(){
-            System.out.println("MyThread Running");
-            System.out.println("MyThread Finished");
+            String threadName = Thread.currentThread().getName();
+            System.out.println(threadName+" Running");
+            System.out.println(threadName+" Finished");
         }
     }
 

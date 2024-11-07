@@ -3,8 +3,9 @@ public class ThreadExample5 {
     // Passing the runnable instance to Thread class.
     public static void main(String[] args) {
         Runnable runnable = () ->{
-            System.out.println("Runnable Running");
-            System.out.println("Runnable Finished");
+            String threadName = Thread.currentThread().getName();
+            System.out.println(threadName+" Running");
+            System.out.println(threadName+" Finished");
         };
 
         System.out.println("Main Running");
